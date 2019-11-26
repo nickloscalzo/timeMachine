@@ -1,0 +1,151 @@
+package TheTimeMachine;
+import java.util.*;
+
+public class TheMachine {
+	
+public static void main(String[] args) {
+	
+	Scanner input = new Scanner(System.in);
+	System.out.println("Sic Tempus Creatus Est: Welcome to the Machine");  // Welcome user to the time machine
+	
+	System.out.print("\nBefore embarking on this journey, it would be wise to make sure the machine is running well. Display machine stats? (y/n): ");
+	char decision = input.next().charAt(0);  // Allow for the user to make the choice with a char input
+	System.out.print("\n\t");					// Initialize decision variable
+	
+	if (decision == 'y') {  // Display stats if the user wants them, use the MachineDataBase object
+	MachineDataBase stats = new MachineDataBase();
+	System.out.println(stats.name);
+	System.out.println("External Shell Material: " + stats.externalMaterial);
+	System.out.println("Length (m): " + stats.length);
+	System.out.println("Width (m): " + stats.width);
+	System.out.println("Height (m) " + stats.height);
+	System.out.println("Average Energy Capacity (ZeV): " + stats.energyCapacity);
+	System.out.println("Average Capacitor Storage (MF): " + stats.capacitance);
+	System.out.println("Tempomagnet Magnetic Field Strength (GT): " + stats.magneticFieldStrength);
+	System.out.println("De Broglie Matter Wavelength (YHz): " + stats.wavelength);
+	
+	}
+	else {System.out.println("A dangerous decision, but good luck to you!"); 
+	}
+	
+	System.out.print("\nEnter which direction you would like to travel in time (past/future): "); 
+	char direction = input.next().charAt(0);  // Initialize direction variable
+	Scanner input2 = new Scanner(System.in);  // Create second scanner for greater clarity
+	
+	if (direction == 'p') {
+		System.out.print("\tSo you have chosen to travel into the past...would you like to confirm this choice? (Enter 'y' or 'n'): "); 
+		char yesOrNo2 = input2.next().charAt(0); // Initialize yesOrNo2 variable
+		if (yesOrNo2 == 'y') {
+			System.out.println("\nYour decision is confirmed. The past is unchangeable, so whatever you do has already been done.");
+			int availableYearMatrix[] = {33, 66, 99};	// Create array variable for time travel increments
+			System.out.println("\nThese are the available time travel increments in years: " + availableYearMatrix[0] + ", " + availableYearMatrix[1] + ", " + availableYearMatrix[2] + ".");
+				
+			Date now2 = new Date();
+			System.out.print("Remember, today's date is " + now2 + ". Enter the current year: ");
+			int currentYear = input2.nextInt(); // Initialize currentYear input variable
+			System.out.print("Enter how many years backward you would like to travel: ");	
+			int year = input2.nextInt();
+			
+
+		switch (year) {   // Use switch statements to create different responses for a different year input
+			case (99): System.out.println("\nYou will now travel to " + (currentYear - 99) + "."); break;
+			case (66): System.out.println("\nYou will now travel to " + (currentYear - 66) + "."); break;
+			case (33): System.out.println("\nYou will now travel to " + (currentYear - 33) + "."); break;
+			default: System.out.println("\nThese temporal locations are not gravitationally reachable. Please start over.");
+			System.out.println("\n");
+			main (null); }}
+		else { System.out.println("\nIf you don't have time, that is completely understandable...no pun intended\n"); main(null);} } 
+		
+		
+	
+		else if (direction == 'f') {    // Display responses for direction of future
+		System.out.print("\n\tSo you have chosen to travel into the future...would you like to confirm this choice? (Enter 'y' or 'n'): "); 
+		char yesOrNo = input.next().charAt(0); 
+		if (yesOrNo == 'y') {
+			System.out.println("\nYour decision is confirmed. The future is thus far indefinite, so tread carefully.");
+			int availableYearMatrix[] = {33, 66, 99};  // Use availableYearMatrix array again
+			System.out.println("\nThese are the available time travel increments in years: " + availableYearMatrix[0] + ", " + availableYearMatrix[1] + ", " + availableYearMatrix[2] + ".");
+			
+			Date now = new Date();
+			System.out.print("Remember, today's date is " + now + ". Enter the current year: "); // Prompt user to enter the current year
+			int currentYear = input2.nextInt();
+			System.out.print("Enter how many years forward you would like to travel: ");	// Prompt user to enter which time increment they would like to choose
+			int year = input2.nextInt();
+
+		switch (year) {
+			case (33): System.out.println("\nYou will now travel to " + (currentYear + 33) + "."); break;
+			case (66): System.out.println("\nYou will now travel to " + (currentYear + 66) + "."); break;
+			case (99): System.out.println("\nYou will now travel to " + (currentYear + 99) + "."); break;
+			default: System.out.println("\nThese temporal locations are not gravitationally reachable. Please start over.");
+						System.out.println("\n");
+						main (null); }}
+		else { System.out.println("\nIf you don't have time, that is completely understandable...no pun intended\n"); main(null);} } // If a non-incremental year is submitted, display default
+		
+		 
+	
+	System.out.print("Enter the number 1 when you are ready to go: ");
+	int i = input.nextInt();
+	
+System.out.println("\nThe time machine will now begin accelerating. Once it reaches final velocity, you will arrive at your desired location.");
+	
+	
+	Scanner input4 = new Scanner(System.in);
+	System.out.print("\nEnter the desired final velocity for your ship in (m/s). Remember the effects of different velocities! \n\tDesired velocity: ");
+	double timeconstant = lorentzFactor(input.nextDouble()); // Input 'timeconstant' into the lorentzFactor method
+	System.out.println("\tThe time constant is " + timeconstant); 
+	if (i == 1) {
+		int j = 1;
+		int k = 1;
+		int l = 1;
+		int m = 1; 
+		int q = 1;
+		int w = 1;
+		int e = 1;
+		int r = 1; 
+		int t = 1;
+		int y = 1;
+		int u = 1;
+		int p = 1; 
+		while (j < 33333 && k < 33333 && l < 33333 && m < 33333 && q < 33333 && w < 33333 && e < 33333 && r < 33333 && t < 33333 && p < 33333 && y < 33333 && u < 33333) {
+			j++;
+			k++;
+			l++;
+			m++;
+			q++;
+			w++;
+			e++;
+			r++;
+			t++;
+			y++;
+			u++;
+			p++;
+			
+			System.out.printf("%10d %10d %10d %10d %10d %10d %10d %10d %10d %10d %10d %10d\n", j, k, l, m, q, w, e, r, t, y, u, p);
+		}
+	}
+	
+	
+	System.out.println("\nYou have successfully travelled into the " + (timeconstant > 1 ? "future" : "past")); // Use conditional operators to display responses to value of 'timeconstant'
+
+	System.out.print("\nWould you like to send a message to headquarters? (y/n): "); // Prompt user to enter message for HQ
+		char yesOrNo3 = input4.next().charAt(0);  // Initialize yesOrNo3 variable
+		if (yesOrNo3 == 'y') { 
+			System.out.println("\nPlease enter your message: ");
+			String message = input4.next();
+			System.out.println("\nYour message has been sent");
+		 }
+		else { System.out.println("\nBe careful out there!"); } 
+		
+	
+	input.close();
+	input2.close();
+	input4.close(); }
+
+	
+	public static double lorentzFactor(double velocity) {  // Create lorentzFactor method
+		
+		final double SPEEDOFLIGHT = 2.998E+8; // Initialize speed of light constant
+		double gamma = 1 / (Math.sqrt(1 - ((velocity * velocity) / Math.pow(SPEEDOFLIGHT, 2)))); // Use math classes in Lorentz factor equation
+			return gamma;  // Return gamma using the input 'timeconstant'
+	}
+}
