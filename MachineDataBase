@@ -1,0 +1,28 @@
+package TheTimeMachine;
+
+public class MachineDataBase {
+	public String name;
+	public String externalMaterial;
+	public double length;
+	public double width;
+	public double height;
+	public double energyCapacity;
+	public double capacitance;
+	public double magneticFieldStrength;
+	public double wavelength;
+	
+
+MachineDataBase() {
+	name = "Tempus Machina";
+	externalMaterial = "Superstable heavy metal, ununpentacontikainium";
+	length = 33.7;
+	width = 33.7;
+	height = 3.33;
+	energyCapacity = 78.963;
+	capacitance = 909.298;
+	magneticFieldStrength = 596.897;
+	wavelength = 622.717;
+	
+	
+	}
+}
